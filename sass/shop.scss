@@ -793,7 +793,7 @@ body {
           content: "";
         }
       }
-
+    
       ul {
         display: block;
         width: 100%;
@@ -845,7 +845,7 @@ body {
           a {
             display: inline-block;
             width: 100%;
-            padding: 30px 0;
+            padding: 15px 0;
             margin: 10px 0;
             &:hover {
               color: $white_color;
@@ -867,7 +867,7 @@ body {
         top: 20px;
         right: 50px;
       }
-      .open__list {
+      .open__list{
         cursor: pointer;
         display: block;
         position: absolute;
@@ -877,7 +877,7 @@ body {
         background: url(../img/list.png) no-repeat center;
         background-size: contain;
       }
-      .close__list {
+      .close__list{
         cursor: pointer;
         display: none;
         position: absolute;
@@ -886,27 +886,27 @@ body {
         font-weight: 600;
         font-size: 35px;
       }
-      .Hmove {
+      .Hmove{
         height: 0;
-        animation: Hmoves 0.3s linear;
+        animation: Hmoves 0.3s linear ;
       }
-      .Smove {
+      .Smove{
         height: auto;
-        animation: moves 0.3s linear;
+        animation: moves 0.3s linear ;
       }
-      @keyframes moves {
-        0% {
+      @keyframes moves{
+        0%{
           height: 0px;
         }
-        100% {
+        100%{
           height: 470px;
         }
       }
-      @keyframes Hmoves {
-        0% {
+      @keyframes Hmoves{
+        0%{
           height: 470px;
         }
-        100% {
+        100%{
           height: 0;
         }
       }

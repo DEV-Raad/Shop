@@ -309,96 +309,137 @@ body {
 }
 /* end link */
 
-/* filter */
-.countact {
-  padding: 0px 20px 20px 20px;
-  h1 {
-    display: inline-block;
-    margin-bottom: 20px;
-    position: relative;
-    &::after {
-      content: "";
-      position: absolute;
-      height: 1;
-      width: calc(90vw - 100%);
-      border-bottom: 3px dotted $sub_color;
-      top: 50%;
-      left: 110%;
-      transform: translateY(-50%);
+/* ShopinCart */
+.shoping{
+  display: grid;
+  grid-template-columns: 65% 30%;
+  grid-template-rows: repeat(1, 1fr);
+  gap: 2%;
+  padding: 20px 10px;
+  margin-bottom: 50px;
+  button{
+    &:hover{
+      opacity: 0.7;
     }
   }
-  &__conuter {
-    display: grid;
-    grid-template-columns: 65% 30%;
-    grid-template-rows: repeat(1, 1fr);
-    gap: 20px;
-    margin: 20px 0;
-    form {
-      padding: 10px 20px;
-      background: $white_color;
-      input {
-        display: block;
-        width: 90%;
-        padding: 8px;
-        margin: 15px 0;
-        background: $white_color;
-        border: 1px solid #ccc;
-        outline: 0;
-      }
-      textarea {
-        display: block;
-        width: 90%;
-        height: 170px;
-        padding: 8px;
-        border: 1px solid #ccc;
-        outline: 0;
-        margin-bottom: 20px;
-      }
-      button {
-        cursor: pointer;
-        padding: 8px;
-        background: $main_color;
-        border-radius: 2px;
-        border: 0;
-        color: $white_color;
+  &__items {
+    text-transform: capitalize;
+    .header {
+      display: grid;
+      grid-template-columns: 35% 10% 30% 10% 15%;
+      background: $sub_color;
+      color: $white_color;
+      text-align: center;
+      h4 {
+        padding: 10px;
+        border-right: 1px solid $color_2;
       }
     }
-    article {
-      .map {
-        width: 100%;
-        height: 300px;
-        margin-bottom: 20px;
-        background: url("../img/carousel-3.jpg") no-repeat center;
-        background-size: cover;
+    .item {
+      display: grid;
+      grid-template-columns: 35% 10% 30% 10% 15%;
+      align-items: baseline;
+      margin: 30px 0;
+      background: $white_color;
+      color: $sub_color;
+      text-align: center;
+      img {
+        width: 40px;
+        height: 40px;
+        vertical-align: middle;
+        margin: 0 10px;
       }
-      .info {
-        width: 100%;
-        padding: 20px;
+      h4 {
+        padding: 10px;
+        font-weight: 100;
+        &:last-child {
+          button {
+            cursor: pointer;
+            padding: 5px 8px;
+            background: rgb(255, 79, 79);
+            color: $white_color;
+            border: 0;
+            transition: 0.3s;
+          }
+        }
+      }
+      .number {
         display: grid;
-        grid-template-columns: 20px 80%;
-        gap: 10px;
-        background: $white_color;
-        .icon {
-          width: 20px;
-          height: 20px;
-          &:nth-of-type(1) {
-            background: url("../img/address-card_.png");
-            background-size: contain;
-          }
-          &:nth-of-type(2) {
-            background: url("../img/email_.png");
-            background-size: contain;
-          }
-          &:nth-of-type(3) {
-            background: url("../img/phone-call_.png");
-            background-size: contain;
-          }
+        grid-template-columns: 40px 40px 40px;
+        align-items: center;
+        justify-content: center;
+        h4 {
+          background: $color_3;
+          padding: 3.5px 0;
+          color: $sub_color;
+        }
+        button {
+          cursor: pointer;
+          padding: 5px 8px;
+          background: $main_color;
+          color: $white_color;
+          border: 0;
+          transition: 0.3s;
         }
       }
     }
   }
+  &__forms {
+    form {
+      display: grid;
+      grid-template-columns: 1fr 100px;
+      margin-bottom: 30px;
+      input {
+        width: auto;
+        padding: 8px 0;
+        border: 1px solid #ccc;
+        outline: 0;
+        text-indent: 10%;
+      }
+      button {
+        cursor: pointer;
+        text-transform: capitalize;
+        padding: 8px 0;
+        transform: translateX(-5px);
+        border: 1px solid #ccc;
+        background: $main_color;
+        color: $white_color;
+      }
+    }
+    .info {
+      text-transform: capitalize;
+      display: flex;
+      flex-wrap: wrap;
+      background: $white_color;
+      h3 {
+        width: 100%;
+        padding: 20px 0;
+        background: $color_3;
+      }
+      h5,
+      h4 {
+        padding: 10px 20px;
+        margin-top: 15px;
+        width: 50%;
+        border-bottom: 1px solid #ccc;
+        font-size: 15px;
+      }
+      h4 {
+        text-align: right;
+      }
+      button {
+        text-transform: capitalize;
+        cursor: pointer;
+        margin: 15px auto;
+        padding: 8px;
+        border: 0;
+        background: $main_color;
+        color: $white_color;
+      }
+    }
+  }
 }
-/* end filter */
+/* end ShopingCart */
 
 /* Footer */
 .footer {
@@ -718,20 +759,8 @@ body {
       }
     }
   }
-  .countact {
-    &__conuter {
-      grid-template-columns: repeat(1, 1fr);
-      grid-template-rows: repeat(2, 1fr);
-      form {
-        padding-bottom: 20px;
-        margin-bottom: 0;
-      }
-      article {
-        .map {
-          height: 200px;
-        }
-      }
-    }
+  .shoping{
+    grid-template-columns: 100%;
   }
   .footer {
     &__main {
@@ -740,7 +769,21 @@ body {
     }
   }
 }
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 620px) {
+  .shoping{
+    &__items{
+      font-size: 12px;
+      .header{
+        grid-template-columns: 20% 15% 25% 20% 20%;
+      }
+      .item{
+        grid-template-columns: 20% 15% 25% 20% 20%;
+        .number{
+          grid-template-columns: 20px 20px 20px;
+        }
+      }
+    }
+  }
   .footer {
     padding: 20px 10%;
     &__main {
