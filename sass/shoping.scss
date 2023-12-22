@@ -778,10 +778,14 @@ body {
       }
       .item{
         grid-template-columns: 20% 15% 25% 20% 20%;
+        h4{
+          font-weight: 600;
+        }
         .number{
           grid-template-columns: 20px 20px 20px;
         }
       }
+
     }
   }
   .footer {
