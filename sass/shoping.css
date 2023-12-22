@@ -737,6 +737,9 @@ body {
   .shoping {
     grid-template-columns: 100%;
   }
+  .shoping__items .item h4 {
+    font-weight: 700;
+  }
   .footer__main {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -751,9 +754,6 @@ body {
   }
   .shoping__items .item {
     grid-template-columns: 20% 15% 25% 20% 20%;
-  }
-  .shoping__items .item h4 {
-    font-weight: 600;
   }
   .shoping__items .item .number {
     grid-template-columns: 20px 20px 20px;
